@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="/reclamacoes/save" method="post">
+        <div>
+            <label for="nome_cliente">Nome do cliente: </label>
+            <select name="id_cliente" id="nome_cliente" required>
+                <option value=""></option>
+                {% for c in clientes %}
+                <option value="{{c.id}}">{{c.nome_cliente}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="reclamacao">Reclamação: </label>
+            <input type="text" name="reclamacao" id="reclamacao" required>
+        </div>
+        <div>
+            <label for="data">Data do ocorrido: </label>
+            <input type="date" name="data" id="data" format="dd/mm/yyyy" placeholder="DD-MM-YYYY" required>
+        </div>
+        <button type="submit" id="salvar">Salvar</button>
+    </form>
+{% endblock %}

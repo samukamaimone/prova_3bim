@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Blueprint</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">FIRMA X LTDA.</a></h1>
+    </header>
+    <nav>
+        <img src="/static/img/bug.png" alt="bug">
+        <a href="/clientes">Clientes</a>
+        <a href="/reclamacoes">Ouvidoria</a>
+    </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div>@copyright</div>
+    </footer>
+</body>
+</html>

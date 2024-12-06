@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="adc">
+        <a href="/reclamacoes/add">Adicionar</a>
+    </div>
+    <table>
+        <tr>
+            <th>Cliente</th>
+            <th>Reclamação</th>
+            <th>Data</th>
+            <th>Remover</th>
+        </tr>
+        {% for r in reclamacoes %}
+        <tr>
+            <td>{{r.descricao}}</td>
+            <td>{{form[r].data.strftime('%d/%m/%Y')}}</td>
+            <td>{{r.cliente.nome_cliente}}</td>
+            <td>
+                <a href="/reclamacoes/remove/{{r.id}}"><img src="/static/img/lixeira.png" alt="lixo"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

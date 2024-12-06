@@ -1,0 +1,86 @@
+* {
+    --primary: #FDAE02;
+    --primary2: #da9500;
+    --secondary: #5A5F64;
+    --alert: #ff0000;
+    --white: #fff;
+    --black: #000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Inter';
+}
+header {
+    background-color: var(--primary);
+    display: flex;
+    height: 5rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+nav {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--primary2);
+    font-size: 24px;
+    height: 3.5rem;
+    align-items: center;
+}
+nav a {
+    color: white;
+    margin-right: 3rem;
+    text-decoration: none;
+}
+nav img {
+    width: 3rem;
+    margin-right: 1rem;
+}
+main {
+    min-height: calc(100vh - 8.5rem - 3.5rem);
+    padding: 1rem;
+}
+footer{
+    background-color: var(--primary);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
+    color: white;
+    font-size: 24px;
+}
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 0.5rem;
+}
+table {
+    margin-bottom: 1rem;
+}
+.adc {
+    padding-bottom: 1rem;
+}
+.adc a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    border-radius: 10%;
+}
+.msg {
+    color: var(--alert);
+    margin-bottom: 1rem;
+}
+button#salvar {
+    color: white;
+    background-color: var(--secondary);
+    border-radius: 10%;
+    padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+}
