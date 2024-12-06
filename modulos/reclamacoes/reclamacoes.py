@@ -30,8 +30,8 @@ def remove(id):
 @bp_reclamacao.route('/save', methods=['POST'])
 def save():
     id_cliente = request.form.get('id_cliente')
-    descricao = request.form.get('descricao')
-    data = datetime.strptime(request.form['data'], "%Y-%m-%d").strftime("%d,%m,%Y")
+    descricao = request.form.get('reclamacao')
+    data = request.form.get('data')
     if id_cliente and descricao and data:
         bd_reclamacao = Reclamacao(id_cliente, descricao, data)
         db.session.add(bd_reclamacao)

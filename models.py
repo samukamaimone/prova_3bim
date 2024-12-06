@@ -19,7 +19,7 @@ class Reclamacao(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     id_cliente = db.Column(db.Integer, db.ForeignKey('cliente.id'))
     descricao = db.Column(db.String(255))
-    data = db.Column(db.DateTime)
+    data = db.Column(db.Date)
 
     cliente = db.relationship('Cliente', foreign_keys=id_cliente)
 

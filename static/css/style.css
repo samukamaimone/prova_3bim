@@ -57,12 +57,14 @@ footer{
 table, tr, td, th {
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
 }
 td, th {
     padding: 0.5rem;
 }
 table {
     margin-bottom: 1rem;
+    width: 100%;
 }
 .adc {
     padding-bottom: 1rem;
@@ -77,10 +79,21 @@ table {
 .msg {
     color: var(--alert);
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 button#salvar {
     color: white;
     background-color: var(--secondary);
     border-radius: 10%;
     padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+}
+tr td img{
+    width: 10%;
+    height: 10%;
+}
+form div {
+    display: grid;
+    grid-template-columns: 5rem auto ;
+    padding: 0.3rem;
 }

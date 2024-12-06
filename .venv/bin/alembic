@@ -1,4 +1,4 @@
-#!/var/www/prova_flask3bim/.venv/bin/python
+#!/var/www/correcaoprova/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
